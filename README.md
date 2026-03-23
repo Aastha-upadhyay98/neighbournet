@@ -1,4 +1,4 @@
-Gemini said
+
 NeighborNet: Bridging the Generative Gap
 🏘️ Project Overview
 NeighborNet is a hyper-local community web application designed to reconstruct the "social fabric" of modern residential buildings. In an era where neighbors often remain strangers, this platform serves as a digital bridge, fostering communication, mutual aid, and safety.
