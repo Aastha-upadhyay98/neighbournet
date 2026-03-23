@@ -1,0 +1,328 @@
+/* ============================================
+   NeighbourNet — Silver Dashboard (Senior UI)
+   High-contrast, large targets, flat nav
+   ============================================ */
+
+/* ── Silver Theme Overrides ── */
+body.silver-mode {
+  --bg-primary: #0A0A1A;
+  --bg-secondary: #121230;
+  --bg-card: #1B1B3A;
+  --bg-card-hover: #252550;
+  --text-primary: #FFFFFF;
+  --text-secondary: #E0E0F0;
+  --text-muted: #A0A0C0;
+  --primary: #4A90E2;
+  --primary-light: #7AB8FF;
+  --secondary: #FFD700;
+  --border: rgba(255,255,255,0.15);
+  --border-light: rgba(255,255,255,0.25);
+  --navbar-bg: rgba(10,10,26,0.95);
+  font-size: 20px;
+}
+
+/* Silver + Light Mode */
+body.silver-mode[data-theme="light"],
+[data-theme="light"] body.silver-mode {
+  --bg-primary: #F8F6FF;
+  --bg-secondary: #EFEBFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F0EDFF;
+  --text-primary: #1A1040;
+  --text-secondary: #3A3460;
+  --text-muted: #7A74A0;
+  --primary: #4A6FE2;
+  --primary-light: #6B8FFF;
+  --secondary: #E6A800;
+  --border: rgba(74,111,226,0.15);
+  --border-light: rgba(74,111,226,0.25);
+  --navbar-bg: rgba(248,246,255,0.95);
+}
+
+/* ── Large Touch Targets ── */
+body.silver-mode .btn {
+  padding: 18px 32px;
+  font-size: 1.2rem;
+  min-height: 56px;
+  border-radius: var(--radius-lg);
+}
+
+body.silver-mode .btn-lg {
+  padding: 22px 40px;
+  font-size: 1.4rem;
+  min-height: 64px;
+}
+
+/* ── Silver Navigation ── */
+.silver-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(16px);
+  border-top: 2px solid var(--border);
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  z-index: 1000;
+  transition: background 0.4s ease;
+}
+
+.silver-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 70px;
+}
+
+.silver-nav-item:hover,
+.silver-nav-item.active {
+  color: var(--secondary);
+  background: rgba(255,215,0,0.1);
+}
+
+.silver-nav-item .nav-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.silver-nav-item .nav-label {
+  font-size: 12px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Silver page padding ── */
+body.silver-mode .page-content {
+  padding-top: var(--space-xl);
+  padding-bottom: 100px; /* room for bottom nav */
+}
+
+/* ── Silver Grid — Big Icons ── */
+.silver-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.silver-action-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-height: 160px;
+  text-align: center;
+}
+
+.silver-action-card:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 0 24px rgba(255,215,0,0.15);
+  transform: translateY(-4px);
+}
+
+.silver-action-card:active {
+  transform: scale(0.97);
+}
+
+.silver-action-card .action-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.silver-action-card .action-label {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+/* ── Silver SOS ── */
+body.silver-mode .sos-floating {
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+  bottom: 110px;
+  right: 20px;
+}
+
+/* ── Silver Feed ── */
+body.silver-mode .feed-item {
+  padding: var(--space-xl);
+  border-width: 2px;
+}
+
+body.silver-mode .feed-item-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+body.silver-mode .feed-item-meta .name {
+  font-size: 1.1rem;
+}
+
+/* ── Silver Inputs ── */
+body.silver-mode .input-field {
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  border-width: 2px;
+}
+
+body.silver-mode .input-group label {
+  font-size: 1rem;
+}
+
+/* ── Call a Neighbor ── */
+.call-neighbor-btn {
+  background: linear-gradient(135deg, #4A90E2 0%, #7AB8FF 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-xl);
+  padding: 24px;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(74,144,226,0.4);
+  transition: all var(--transition-base);
+  min-height: 72px;
+}
+
+.call-neighbor-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 32px rgba(74,144,226,0.6);
+}
+
+.call-neighbor-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Voice Command Button (Senior) ── */
+.voice-command-card {
+  background: linear-gradient(135deg, rgba(0,206,201,0.12) 0%, rgba(0,206,201,0.04) 100%);
+  border: 2px solid rgba(0,206,201,0.25);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  transition: all var(--transition-base);
+}
+.voice-command-card:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 0 24px rgba(0,206,201,0.15);
+}
+
+.voice-main-btn {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00CEC9 0%, #81ECEC 100%);
+  color: white;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  transition: all var(--transition-base);
+  position: relative;
+}
+.voice-main-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 32px rgba(0,206,201,0.5);
+}
+.voice-main-btn.listening {
+  animation: voice-circle-pulse 1.2s ease-in-out infinite;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FD79A8 100%);
+}
+@keyframes voice-circle-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(253,121,168,0.5); }
+  70% { box-shadow: 0 0 0 24px rgba(253,121,168,0); }
+  100% { box-shadow: 0 0 0 0 rgba(253,121,168,0); }
+}
+
+.voice-status {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-sm);
+}
+.voice-hint {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+}
+
+/* ── High Contrast ── */
+body.silver-mode .card {
+  border-width: 2px;
+}
+
+body.silver-mode .section-title {
+  font-size: 1.6rem;
+}
+
+/* ── Silver Chat ── */
+body.silver-mode .chat-bubble {
+  font-size: 1.1rem;
+  padding: 16px 20px;
+  max-width: 85%;
+}
+
+body.silver-mode .chat-input-bar input {
+  font-size: 1.1rem;
+  padding: 16px 24px;
+}
+
+/* ── Silver Modal ── */
+body.silver-mode .modal-content {
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+body.silver-mode .modal-title {
+  font-size: 1.4rem;
+}
+
+/* ── Silver Responsive ── */
+@media (max-width: 480px) {
+  .silver-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .silver-action-card {
+    min-height: 120px;
+    flex-direction: row;
+    padding: var(--space-lg);
+  }
+  .silver-action-card .action-icon {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 769px) {
+  .silver-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

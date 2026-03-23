@@ -1,0 +1,129 @@
+/* ============================================
+   NeighbourNet — Design Tokens
+   Dual Theme: Dark (default) & Light
+   ============================================ */
+
+:root, [data-theme="dark"] {
+  /* ── Brand Colors ── */
+  --primary: #6C5CE7;
+  --primary-light: #A29BFE;
+  --primary-dark: #4834D4;
+  --secondary: #00CEC9;
+  --secondary-light: #81ECEC;
+  --accent: #FD79A8;
+  --accent-light: #FDCB6E;
+
+  /* ── Neutrals ── */
+  --bg-primary: #0F0E17;
+  --bg-secondary: #1A1932;
+  --bg-card: #232246;
+  --bg-card-hover: #2D2B55;
+  --bg-input: #1A1932;
+  --text-primary: #FFFFFE;
+  --text-secondary: #B8B8D4;
+  --text-muted: #72728C;
+  --border: rgba(255,255,255,0.08);
+  --border-light: rgba(255,255,255,0.15);
+
+  /* ── Semantic ── */
+  --success: #00B894;
+  --warning: #FDCB6E;
+  --danger: #E74C3C;
+  --danger-light: #FF6B6B;
+  --info: #74B9FF;
+
+  /* ── Gradients ── */
+  --gradient-primary: linear-gradient(135deg, #6C5CE7 0%, #A29BFE 100%);
+  --gradient-secondary: linear-gradient(135deg, #00CEC9 0%, #81ECEC 100%);
+  --gradient-accent: linear-gradient(135deg, #FD79A8 0%, #FDCB6E 100%);
+  --gradient-hero: linear-gradient(135deg, #0F0E17 0%, #1A1932 40%, #2D2B55 100%);
+  --gradient-card: linear-gradient(145deg, rgba(108,92,231,0.1) 0%, rgba(0,206,201,0.05) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-glow: 0 0 20px rgba(108,92,231,0.3);
+  --shadow-glow-accent: 0 0 20px rgba(253,121,168,0.3);
+
+  /* ── Navbar ── */
+  --navbar-bg: rgba(15,14,23,0.85);
+
+  /* ── Theme Toggle ── */
+  --theme-icon: '🌙';
+}
+
+/* ── Light Theme ── */
+[data-theme="light"] {
+  --bg-primary: #F5F3FF;
+  --bg-secondary: #EEEAFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F0EDFF;
+  --bg-input: #F0EDFF;
+  --text-primary: #1A1040;
+  --text-secondary: #4A4370;
+  --text-muted: #8A84A8;
+  --border: rgba(108,92,231,0.12);
+  --border-light: rgba(108,92,231,0.22);
+
+  --gradient-hero: linear-gradient(135deg, #F5F3FF 0%, #EEEAFF 40%, #E0DBFF 100%);
+  --gradient-card: linear-gradient(145deg, rgba(108,92,231,0.06) 0%, rgba(0,206,201,0.03) 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.65) 100%);
+
+  --shadow-sm: 0 2px 8px rgba(108,92,231,0.08);
+  --shadow-md: 0 4px 16px rgba(108,92,231,0.12);
+  --shadow-lg: 0 8px 32px rgba(108,92,231,0.15);
+  --shadow-glow: 0 0 20px rgba(108,92,231,0.15);
+  --shadow-glow-accent: 0 0 20px rgba(253,121,168,0.15);
+
+  --navbar-bg: rgba(245,243,255,0.88);
+
+  --theme-icon: '☀️';
+}
+
+/* ── Typography ── */
+:root {
+  --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3.5rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ── Spacing ── */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* ── Radius ── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 50%;
+
+  /* ── Transitions ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --nav-height: 64px;
+  --sidebar-width: 280px;
+  --max-width: 1200px;
+  --mobile-bp: 768px;
+}
